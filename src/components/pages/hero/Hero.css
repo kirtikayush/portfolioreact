@@ -1,0 +1,125 @@
+.hero {
+  height: calc(100vh - 120px);
+  width: 100%;
+  background-color: var(--background);
+  transition: background-color 0.3s ease;
+  padding: 120px 0 0 0;
+
+  display: flex;
+  justify-content: center;
+  /* centers .inner horizontally in the hero */
+  align-items: center;
+  /* centers .inner vertically in the hero */
+}
+
+.hero .inner {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  /* set container width */
+  height: auto;
+  /* height adjusts to content */
+  justify-content: center;
+  /* vertical centering of children inside .inner */
+  align-items: flex-start;
+  /* left-align children horizontally */
+  gap: 20px;
+  /* background-color: red; */
+  /* spacing between heading and TrueFocus */
+}
+
+.hero .inner h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: left;
+  /* left-align text */
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.hero .inner h2 {
+  font-size: 6rem;
+  /* Different font size for h2 */
+  font-weight: 400;
+  text-align: left;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.hero .inner .true-focus {
+  display: flex;
+  justify-content: flex-start;
+  /* left-align animation */
+  align-items: center;
+  font-size: 2.5rem;
+  /* vertically center if needed */
+}
+
+.hero.light {
+  --background: white;
+  --text-color: black;
+}
+
+.hero.dark {
+  --background: black;
+  --text-color: white;
+}
+
+.hero.light h1,
+.hero.light h2,
+.hero.light .true-focus {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.hero.dark h1,
+.hero.dark h2,
+.hero.dark .true-focus {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 1200px) {
+  .hero .inner {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero .inner h1 {
+    font-size: 2rem;
+    /* Smaller than 3rem */
+  }
+
+  .hero .inner h2 {
+    font-size: 3rem;
+    /* Smaller than 6rem */
+  }
+
+  .hero .inner .true-focus {
+    font-size: 1.5rem;
+    /* Smaller than 2.5rem */
+  }
+
+  .text-type__content {
+    font-size: 1.5rem !important;
+    /* Adjust TextType font size */
+  }
+
+  .hero .inner h1,
+  .hero .inner h2,
+  .hero .inner .true-focus,
+  .text-type__content {
+    text-align: center;
+  }
+}
+.fade-transition {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-transition.fade-in {
+  opacity: 1;
+}
