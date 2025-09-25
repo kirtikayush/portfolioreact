@@ -1,7 +1,7 @@
 .hero {
   height: calc(100vh - 120px);
   width: 100%;
-  background-color: var(--background);
+  /* background-color: var(--background); */
   transition: background-color 0.3s ease;
   padding: 120px 0 0 0;
 
