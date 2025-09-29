@@ -14,7 +14,7 @@
 }
 
 .projectMain {
-  width: 60%;
+  width: 1000px;
   height: 100%;
   /* background-color: var(--background); */
   padding: 30px 20px;
@@ -58,28 +58,41 @@
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 20%;
+  justify-content: center;
+  gap: 10%;
   cursor: pointer;
 
   text-decoration: none; /* remove underline */
   color: var(--text-color-card);
+
+  height: 230px;
 }
 
 .projectCard:hover {
   transform: translateX(6px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  background-color: orange;
+  /* border: 5px solid orange; */
+}
+
+.projectText {
+  /* background-color: red; */
+  width: 100%;
+  /* height: 100%; */
 }
 
 .projectImage {
-  width: 100%;
-  height: 160px;
+  /* width: 100%; */
+  height: 100%;
+  aspect-ratio: 16/9; /* or keep 4/3 if you want */
   object-fit: cover;
   border-radius: 12px;
-  margin-bottom: 15px;
+  display: block; /* avoids inline image whitespace */
 }
 
 .projectCard h3 {
@@ -124,22 +137,98 @@
   --text-color-card: #f1f1f1;
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .projectMain {
     width: 90%;
   }
-}
+} */
 
-@media (max-width: 768px) {
-  .projectListed .projectCard {
+@media (max-width: 1100px) {
+  .project {
+    padding: 0 0;
+    /* background-color: yellow; */
+
+    /* background-color: red; */
+  }
+
+  .projectMain hproject {
+    letter-spacing: 1px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: yellow; */
+  }
+
+  .projectMain {
+    /* background-color: yellow; */
+    width: 100%;
+    padding: 0 0;
+    /* font-size: 2rem; */
+  }
+
+  .projectListed {
+    display: flex;
+    align-items: center;
+    /* background-color: green; */
+  }
+
+  .projectCard {
     flex-direction: column-reverse; /* stack text & image vertically */
     gap: 10px;
+    display: flex;
+    align-items: center;
+    /* padding */
+    /* height: 500px; */
+    /* aspect-ratio: 16/9; */
+    width: 80%;
+    max-width: 400px;
+    height: 100%;
+  }
+
+  .projectCard:hover {
+    transform: none;
+    box-shadow: none;
+    background-color: var(--card-bg); /* keeps card normal */
+  }
+
+  .projectText {
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    /* font-size: small; */
+    /* height: 100%; */
+    /* min-height: 100%; */
+    /* background-color: grey; */
+  }
+
+  .projectCard h3 {
+    font-size: 1.1rem;
+    margin: 0 0 0px 0;
+    font-weight: 500;
+  }
+
+  .projectSkills {
+    font-size: 0.7rem;
+    /* color: #777; */
+    margin-bottom: 10px;
+  }
+
+  .projectDescription {
+    font-size: 0.8rem;
+    line-height: 1.4;
   }
 
   .projectListed .projectCard .projectImage {
-    width: 100%;
+    /* height: 100%; */
+    /* width: 100%; */
+    /* height: 100%; */
     /* height: 400px; */
-    aspect-ratio: 16/9;
+    width: 100%;
+    /* height: auto; */
+    /* aspect-ratio: 16/9; */
     margin-bottom: 0;
+    /* margin-top: 20px; */
+    background-color: red;
   }
 }

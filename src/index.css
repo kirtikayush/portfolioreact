@@ -5,7 +5,9 @@
 
 body {
   height: 100vh;
-  background-color: white;
+  width: 100vw;
+  /* background-color: white; */
+  /* background-color: red; */
   color: black;
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;

@@ -1,12 +1,14 @@
 // src/components/pages/projects/projectsData.jsx
 
 // import image1 from "../../../assets/image/profile.jpeg";
+import image1 from "../../../assets/image/screenshots/todo_app/loginfilled.png";
 
 const projectsData = [
   {
     id: 1,
     // image: image1,
-    name: "Portfolio Website",
+    name: "Todo App",
+    image: image1,
     skills: ["React", "CSS", "JavaScript"],
     description:
       "A personal portfolio website with dark/light mode and animations.",
